@@ -1,0 +1,79 @@
+lakecode,ManuscriptName,lake,latitude,longitude,continent,country,elevation,surface_area,mean_depth,max_depth,shoreline,contributor,alternate_lakenames,surface_area_source,mean_depth_source,max_depth_source,shoreline_source,elevation_google
+ARAI1,Lake Suwa,suwa,36.04,138.08,Asia,Japan,759,13.7,4.1,7.6,18,Yasuyuki Aono,Lake Suwa;LAKE SUWA;Suwa,Yasuyuki Aono,Yasuyuki Aono,Yasuyuki Aono,LIAG,807.2
+DML1,Lej de San Murezzan,lej_da_san_murezzan,46.494,9.847,Europe,Switzerland,1768,0.78,25,44,NA,Damien Bouffard,LEJ DA SAN MUREZZAN;Lej de San Murezzan,Damien Bouffard,Damien Bouffard,Damien Bouffard,,1807.7
+DMR1,Lake Mendota,mendota,43.128,-89.42,North America,United States of America,259.1,39.377,12.8,25.3,33.8,Dale Robertson,Mendota,LIAG,LIAG,LIAG,LIAG,266.5
+DMR2,Lake Monona,monona,43.067,-89.366,North America,United States of America,257.5,13.24,8.2,22.5,20.9,Dale Robertson,Monona,LIAG,LIAG,LIAG,LIAG,261.2
+GAH1,Lake Auburn,auburn,44.1444,-70.25,North America,United States of America,79,9,11,36,20,Julia Daly,Lake Auburn,LSM,LSM,LSM,LSM,112
+GAH10,Kezar Lake,kezar,44.193,-70.901,North America,United States of America,115,11,10,47,55,Julia Daly,Kezar Lake,LSM,LSM,LSM,LSM,206
+GAH14,Mooselookmeguntic Lake ,mooselookmeguntic,44.9069,-70.8111,North America,United States of America,447,66,18,40,92,Julia Daly,Mooselookmeguntic Lake,LSM,LSM,LAKEPEDIA,LSM,509.7
+GAH15,Pennesseewassee Lake,pennessewassee,44.2261,-70.5786,North America,United States of America,116,4,6,15,19,Julia Daly,Pennesseewassee (Norway) Lake;Pennessewassee Lake,LSM,LSM,LSM,LSM,168.9
+GAH20,Richardson Lake,richardson,44.8564,-70.8656,North America,United States of America,441,31,13,33,87,Julia Daly,Richardson Lake,LSM,LSM,LSM,LSM,496.1
+GAH21,Sebago Lake,sebago,43.8708,-70.5669,North America,United States of America,81,121,33,96,158,Julia Daly,Sebago Lake;Sebago Lake *(see notes),LSM,LSM,LSM,LSM,82.2
+GAH22,Sebec Lake,sebec,45.2828,-69.2792,North America,United States of America,98,26,13,47,84,Julia Daly,Sebec Lake,LSM,LSM,LAKEPEDIA,LSM,131.9
+GAH24,Lake Sunapee,sunapee,43.376,-72.053,North America,United States of America,333,17,11,32,110,Julia Daly,Sunapee Lake,LSPA,NHDES,LAKEPEDIA,NHDES,428.8
+GAH26,Thompson Lake,thompson,44.0661,-70.4853,North America,United States of America,93,18,11,37,52,Julia Daly,Thompson Lake,LSM,LSM,LSM,LSM,109.1
+GAH27,Umbagog Lake,umbagog,44.8014,-71.0283,North America,United States of America,379,31,4,15,14,Julia Daly,Umbagog Lake,LSM,LSM,LAKEPEDIA,LSM,408.2
+GAH28,West Grand Lake,west_grand,45.2156,-67.8144,North America,United States of America,91,59,12,39,79,Julia Daly,West Grand Lake,LSM,LSM,LAKEPEDIA,LSM,106.6
+GAH29,Lake Winnipesaukee,winnipesaukee,43.603,-71.362,North America,United States of America,154,179,13,55,463,Julia Daly,Winnipesaukee,NHDES,NHDES,NHDES,NHDES,156.7
+GAH3,China Lake,china,44.4339,-69.5456,North America,United States of America,59,16,9,26,49,Julia Daly,China Lake,LSM,LSM,LAKEPEDIA,LSM,80.9
+GAH4,Cobbosseecontee Lake,cobbossee,44.2717,-69.9294,North America,United States of America,51,22,11,31,99,Julia Daly,Cobbosseecontee Lake;Cobbossee Lake,LSM,LSM,LSM,LSM,88.7
+GAH5,Damariscotta Lake,damariscotta,44.1825,-69.4792,North America,United States of America,15,19,35,9,70.3,Julia Daly,Damariscotta Lake,LIAG,LSM,LIAG,LIAG,64.6
+GAH9,Houghton’s Pond,houghtons_pond,42.2072,-71.0964,North America,United States of America,50,0.1,NA,13,1.8,Julia Daly,Houghtons (Hoosicwhisick) Pond,LAKEPEDIA,,LAKEPEDIA,MA DOC,42.3
+GW202,Lake Runn,runn,60.46887821,15.59264793,Europe,Sweden,106.8,64.7024,8.3,29.5,NA,Gesa Weyhenmeyer,RUNN,LIAG,LIAG,LIAG,,108.3
+GW240,Lakes Orsasjön,orsasjon,61.072,14.548,Europe,Sweden,159.9,52.827,17.3,92.2,NA,Gesa Weyhenmeyer,ORSASJÃ–N,LIAG,LIAG,LIAG,,164.8
+GW341,Lake Näckten,nackten,62.91277456,14.57243073,Europe,Sweden,323.95,84.2389,15.5,44,NA,Gesa Weyhenmeyer,NÃ„CKTEN,LIAG,LIAG,LIAG,,324.4
+GW369,Lake Kallsjön,kallsjon,63.568,12.977,Europe,Sweden,380.525,156.3551,40.1,102.825,NA,Gesa Weyhenmeyer,KALLSJÃ–N,LIAG,LIAG,LIAG,,420.3
+GW484,Lake Skoruman,storuman,65.262,16.71,Europe,Sweden,350.125,163.47221,25.6,128.75,NA,Gesa Weyhenmeyer,STORUMAN,LIAG,LIAG,LIAG,,395.6
+GW512,Lake Gouta,gouta,65.60290617,15.52196705,Europe,Sweden,438.63333,31.5935,17.2,58,NA,Gesa Weyhenmeyer,GÃ–UTA,LIAG,LIAG,LIAG,,614.3
+GW592,Lake Jukkasjärvi,jukkasjarvi,67.79864283,20.81051561,Europe,Sweden,322.35,13.50505,NA,NA,NA,Gesa Weyhenmeyer,JUKKASJÃ„RVI,LIAG,LIAG,,,376.6
+JJM22,Shell Lake,shell,45.732,-91.896,North America,United States of America,370.94,10.45,7.01,11,NA,Dale Robertson,SHELL LAKE;Shell;Shell Lake,LIAG,LIAG,LAKEPEDIA,,389.4
+JJM27,Geneva Lake,geneva,42.568,-88.479,North America,United States of America,263.35,20.66,18.59,41.148,NA,Dale Robertson,LAKE GENEVA;Lake Geneva;Geneva,LIAG,LIAG,http://dnr.wi.gov/lakes/lakepages/LakeDetail.aspx?wbic=758300&page=facts,,299.6
+JJM33,Lake Superior,bayfield,46.81,-90.81,North America,United States of America,182.88,NA,NA,NA,NA,John Magnuson,Bayfield,,,,,204.9
+JK01,Lake Oulujärvi,oulujarvi,64.3,27.3,Europe,Finland,122.7,887,NA,NA,NA,Johanna Korhonen,OULUJARVI;OulujÃ_rvi,Johanna Korhonen,,,,122
+JK02,Lake Kallavesi,kallavesi,62.83,27.77,Europe,Finland,81.8,316,9.7,75,NA,Johanna Korhonen,LAKE KALLAVESI (4079);Kallavesi,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,83.1
+JK03,Lake Näsijärvi,nasijarvi,61.53,23.75,Europe,Finland,95.4,256,13,61,NA,Johanna Korhonen,"LAKE NASIJARVI (3568);NÃ_sijÃ_rvi, Tampere",Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,97.1
+JK04,Lake Vesijärvi,vesijarvi,61.18,25.54,Europe,Finland,81.4,107.6,6.6,40,169,Johanna Korhonen,LAKE VESIJARVI (1462);VesijÃ_rvi,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,LIAG,83
+JK05,Lake Päijänne,paijanne,61.18,25.54,Europe,Finland,78.3,1080,15,94.5,2345,Johanna Korhonen,LAKE PAIJANNE (1463);PÃ_ijÃ_nne. VÃ_Ã_ksy,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,LIAG,83
+JK09,Lake Pielavesi,pielavesi,63.2,26.67,Europe,Finland,102.3,110,NA,NA,NA,Johanna Korhonen,PIELAVESI - SAVIA (1427);Pielavesi,Johanna Korhonen,,,,108.6
+JK25,Lake Haukivesi,haukivesi,62.11,28.61,Europe,Finland,75.8,560,9.1,55,NA,Johanna Korhonen,HAUKIVESI;Haukivesi,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,77
+JK31,Lake Lentua,lentua,64.251,29.694,Europe,Finland,167.9,77.8,7.4,52,NA,Johanna Korhonen,LENTUA;Lentua,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,168.3
+JK40,Lake Pielinen,pielinen,63.54,29.13,Europe,Finland,93.7,894,10,61,NA,Johanna Korhonen,PIELINEN;Pielinen,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,118.5
+JK45,Lake Visuvesi,visuvesi,62.12,23.93,Europe,Finland,96.1,46.2,6.95,62,NA,Johanna Korhonen,VISUVESI;Visuvesi,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,116.7
+JK46,Lake Palovesi,palovesi,61.86,23.91,Europe,Finland,96,25.5,9.6,60.97,NA,Johanna Korhonen,PALOVESI;Palovesi,Johanna Korhonen,Johanna Korhonen,Johanna Korhonen,,140
+KMS11,Mirror Lake,mirror,44.291,-73.982,North America,United States of America,565,0.518,4.3,18.3,NA,Brendan Wiltse,MIRROR;Mirror Lake,LIAG,LIAG,LIAG,,570.7
+KMS14,Otsego Lake,otsego,42.758,-74.894,North America,United States of America,363,17.11,24.9,50.6,34.49,Kiyoko Yokota,Otsego,LIAG,LIAG,LIAG,LIAG,425.2
+KMSM1,Moosehead Lake,moosehead,45.672,-69.708,North America,United States of America,314,303,17,75,452,Julia Daly,Moosehead Lake,LIAG,LSM,LIAG,LSM,334.3
+LR1,Oneida Lake,oneida,43.21,-75.905,North America,United States of America,112,206.7,6.8,16.8,33.6,Lars Rudstam,Oneida Lake,LIAG,LIAG,LIAG,LIAG,125.6
+LR2,Cazenovia Lake,cazenovia,42.951,-75.871,North America,United States of America,363,4.79,7.2,14.5,5.48,Lars Rudstam,Cazenovia Lake;CAZENOVIA,LIAG,LIAG,LIAG,LIAG,309.4
+MINN12,Lake Minnetonka,minnetonka,44.91,-93.653,North America,United States of America,283,58,9.144,34.4,146.6,Lesley Knoll,Minnetonka (MN27013300);MINNETONKA,LIAG,MN Lake Finder  https://www.dnr.state.mn.us/lakefind/lake.html?id=27013300,LIAG,LIAG,292.4
+MINN2,Detroit Lake,detroit,46.783,-95.933,North America,United States of America,406.6,13,4,25,20,Lesley Knoll,Detroit (MN03038100),LIAG,LAKEPEDIA,LIAG,LIAG,413.5
+MINN34,Green Lake,green,45.25231,-94.90525,North America,United States of America,352.35,23.56,NA,35.05,18.95319718,Ken Blumenfeld:Pete Boulay,Green (MN34007900);GREEN,LIAG,,LIAG,MNDNR,355.2
+NG1,Lake Baikal,baikal,53.663,108.188,Asia,Russia,NA,31722,744,1642,NA,Nikolay Granin,LAKE BAIKAL;Lake Baikal (Listvyanka);Lake Baikal,Nikolay Granin,Nikolay Granin,Nikolay Granin,,5.7
+PJD15,Lake of Bays,haystack_bay__lake_of_bays,45.283,-79.018,North America,Canada,315,70.581,NA,NA,NA,Huaxia Yao,"Haystack Bay, Lake of Bays",LIAG,,,,352.6
+RAA3,Grand Traverse Bay,grand_traverse_bay,44.77,-85.62,North America,United States of America,176.45,717.427,46,100,NA,Heather Smith,Grand Traverse Bay,http://www.gtbay.org/wp-content/uploads/2010/11/GTBWS_Facts.pdf,LIAG,LIAG,,168.3
+RH1,Rangeley Lake,rangeley,44.9447,-70.6983,North America,United States of America,463,24,18,45,53,Julia Daly,Rangeley Lake,LIAG,LSM,LIAG,LSM,588.7
+USGS1,Lake Champlain,champlain,44.306,-73.326,North America,United States of America,95,1127,19.5,122,944.7,Jason Stockwell,LAKE CHAMPLAIN;Champlain,LIAG,LIAG,LIAG,LIAG,56
+WRS302,Lake Nipissing,nipissing,46.27,-79.54,North America,Canada,NA,NA,NA,NA,NA,Huaxia Yao,Lake Nipissing;LAKE NIPISSING,,,,,196.1
+xAM01,Lake Simcoe,kempenfelt_bay,44.386,-79.614,North America,Canada,NA,NA,NA,NA,NA,Alex Mills,Kempenfelt Bay,,,,,225
+xHJHF01,Lake Murten,murtensee,46.9276,7.074,Europe,Switzerland,NA,23,24,46,NA,Harrie-Jan Hendricks Franssen,Murtensee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,440
+xHJHF02,Lake Baldeggersee,baldeggersee,47.2003,8.26,Europe,Switzerland,NA,5.3,33.1,66,NA,Harrie-Jan Hendricks Franssen,Baldeggersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,487.8
+xHJHF03,Lake Sarnen,sarnersee,46.8698,8.2206,Europe,Switzerland,NA,7.1,33.5,52,NA,Harrie-Jan Hendricks Franssen,Sarnersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,789.9
+xHJHF04,Lake Hallwil,hallwilersee,47.2772,8.2173,Europe,Switzerland,NA,10.3,28,47,NA,Harrie-Jan Hendricks Franssen,Hallwilersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,473.7
+xHJHF05,Lake Greifensee,greifensee,47.3478,8.6793,Europe,Switzerland,NA,8.5,17.8,32,NA,Harrie-Jan Hendricks Franssen,Greifensee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,491.9
+xHJHF06,Lake Constance,untersee,47.6957,9.0232,Europe,Germany,NA,29.3,19.1,46,NA,Harrie-Jan Hendricks Franssen,Untersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,398.5
+xHJHF07,Lake Aegeri,aegerisee,47.12,8.62,Europe,Switzerland,NA,7,48.5,83,NA,Harrie-Jan Hendricks Franssen,Aegerisee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,988.9
+xHJHF08,Lake Sempach,sempachersee,47.1441,8.1549,Europe,Switzerland,NA,15,43.6,87,NA,Harrie-Jan Hendricks Franssen,Sempachersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,566.8
+xHJHF09,Lake Biel,bielersee,47.0811,7.1696,Europe,Switzerland,NA,39.8,31,74,NA,Harrie-Jan Hendricks Franssen,Bielersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,524
+xHJHF10,Lake Pfäffikon,pfaffikersee,47.3508,8.7824,Europe,Switzerland,NA,3.2,18.6,35,NA,Harrie-Jan Hendricks Franssen,PfÃ_ffikersee,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,Harrie-Jan Hendricks Franssen,,558.7
+xHM01,Lake ﬁingvallavatn,thingvallavatn,64.1833326,-21.1499994,Europe,Iceland,NA,84,34,114,NA,Leif Asbj¯rn V¯llestad et al. 2021 - Dryad,,_ingvallavatn Lake,_ingvallavatn Lake,_ingvallavatn Lake,,100
+xIMGW01,Serwy Lake,serwy,53.901,23.206,Europe,Poland,NA,NA,NA,NA,NA,WÅ‚odzimierz Marszelewski,Lake Serwy,,,,,129.9
+xKB0290,Christmas Lake,christmas,44.89707,-93.54321,North America,United States of America,NA,1.08119863,NA,26.5176,6.11551,MN climatologist,Christmas (MN27013700),MN Lake Finder     https://www.dnr.state.mn.us/lakefind/lake.html?id=27013700,,MN Lake Finder     https://www.dnr.state.mn.us/lakefind/lake.html?id=27013700,MN Lake Finder     https://www.dnr.state.mn.us/lakefind/lake.html?id=27013700,285.7
+xKB0309,Clear Lake,clear,44.08707,-93.48469,North America,United States of America,NA,2.62547904,NA,10.3632,7.06502,MN climatologist,Clear (MN81001401),MN Lake Finder    https://www.dnr.state.mn.us/lakefind/lake.html?id=81001401,,MN Lake Finder    https://www.dnr.state.mn.us/lakefind/lake.html?id=81001401,MN Lake Finder    https://www.dnr.state.mn.us/lakefind/lake.html?id=81001401,344.5
+xKB1618,Shields Lake,shields,44.36998,-93.44184,North America,United States of America,NA,3.806028,NA,12.8016,14.468,MN climatologist,Shields (MN66005500),MN Lake Finder    https://www.dnr.state.mn.us/lakefind/lake.html?id=66005500,,MN Lake Finder    https://www.dnr.state.mn.us/lakefind/lake.html?id=66005500,MN Lake Finder    https://www.dnr.state.mn.us/lakefind/lake.html?id=66005500,336.7
+xKB1978,Wilson Lake,wilson,44.600448,-70.2536112,North America,United States of America,174,2,12,27,11,Julia Daly,Wilson Lake,LSM,LSM,LSM,LSM,174
+xMR001,Mohonk Lake,mohonk,41.7678,-74.1556,North America,United States of America,380,0.069,6.5,18,NA,Mohonk Preserve Daniel Smiley Research Center,Mohonk Lake,,,,,383
+xNL001,Lake Atnsj¯en,atnsj¯en,61.852,10.226,Europe,Norway,NA,5,NA,NA,19.38,Leif Asbj¯rn V¯llestad et al. 2021 - Dryad,Atnsj¯en Lake,Norwegian Water Resources and Energy Directorate,,,Norwegian Water Resources and Energy Directorate,701
+xNL002,Lake Aursunden,aursunden,62.68,11.462,Europe,Norway,NA,46.04,NA,52,102.98,Leif Asbj¯rn V¯llestad et al. 2021 - Dryad,Aursunden Lake,Norwegian Water Resources and Energy Directorate,,Norwegian Water Resources and Energy Directorate,,690
+xNL082,Lake Tesse,tesse,61.814,8.941,Europe,Norway,NA,12.78,NA,NA,24.14,Leif Asbj¯rn V¯llestad et al. 2021 - Dryad,Tesse Lake,Norwegian Water Resources and Energy Directorate,,,Norwegian Water Resources and Energy Directorate,856
+xNL084,Lake Tunhovfjorden,tunhovdfjorden,60.426,8.833,Europe,Norway,NA,25.3,NA,NA,NA,Leif Asbj¯rn V¯llestad et al. 2021 - Dryad,Tunhovdfjorden Lake,Norwegian Water Resources and Energy Directorate,,,,734
+xTAK01,Lake Balaton,balaton,46.9073,18.0448,Europe,Hungary,104,596,3,11.2,195,Takacs,Lake Balaton,LIAG,LIAG,LIAG,LIAG,104.9

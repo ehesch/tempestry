@@ -1,0 +1,138 @@
+---
+title: "Hennepin County MN"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  html_document:
+    toc: no
+always_allow_html: yes
+urlcolor: blue
+---
+
+```{r setup, echo = F, message = F}
+knitr::opts_chunk$set(echo = FALSE, message = F, warning = F)
+
+library(tidyverse)
+library(rnoaa)
+library(showtext)
+
+source(file.path(here::here(), "R/annual_functions.R"))
+source(file.path(here::here(), "R/daily_functions.R"))
+source(file.path(here::here(), "R/poster_functions.R"))
+
+sysfonts::font_add_google(name = "Amatic SC", family = "amatic-sc")
+showtext_auto()
+```
+
+## Daily temperatures
+
+### Fetch station data
+
+
+```{r}
+# fetch daily data; this does take a while
+raw_daily_temps <- fxn_fetch_daily_stations(
+  .site_latitude = 46.81077300996613, 
+  .site_longitude = -90.81863301315441,
+  .distance_radius_mi = 20
+)
+
+# make a map of which weather stations you are using for the daily temps; go back and adjust your parameters if you don't like it.
+raw_daily_temps %>%
+  group_by(latitude, longitude, name, id) %>%
+  summarise(mindate = min(date), maxdate = max(date)) %>%
+  sf::st_as_sf(coords = c( "longitude", "latitude"), crs = 4326) %>%
+  mapview::mapview()
+  
+```
+
+### Decide what years to use
+
+```{r}
+min_year <- count(raw_daily_temps, year) %>%
+  full_join(tibble(year = c(min(raw_daily_temps$year) : max(raw_daily_temps$year)))) %>%
+  arrange(year) %>% 
+  filter(is.na(n) | n < 300) %>%
+  summarise(start_year = max(year) + 1) %>%
+  .[[1]]
+
+if(is.infinite(min_year)) {
+  min_year <- lubridate::year(min(raw_daily_temps$date))
+} else {
+  min_year <- min_year
+}
+```
+
+### Process ice phenology data
+
+```{r}
+ice_phenology <- read_csv(file.path(here::here(), "data-raw/sharma2022data/PhenologyData.csv")) %>%
+  filter(lake == "bayfield") %>%
+  full_join(tribble(~"start_year", ~"iceOn", ~"iceOff",
+                    2022, lubridate::ymd("2022-01-18"), lubridate::ymd("2022-04-10"))) %>%
+  mutate(fill = if_else(froze == "Y" & is.na(iceOn), 1, 2)) %>%
+  fill(iceOn) %>%
+  mutate(iceOn = if_else(fill == 1, lubridate::ymd(paste0(start_year, "-", lubridate::month(iceOn), "-", lubridate::day(iceOn))), iceOn)) %>%
+  filter(!is.na(iceOn), !is.na(iceOff))  %>% 
+  nest(iceOn, iceOff) %>%
+  mutate(data = map(data, ~seq(unique(.x$iceOn), unique(.x$iceOff), 1))) %>%
+  unnest(data) %>%
+  transmute(doy = lubridate::yday(data),
+            year = lubridate::year(data)) %>%
+  filter(year >= min_year)
+
+```
+
+
+
+### Make daily plot
+
+```{r}
+daily_averages <- fxn_process_daily(
+  .df = raw_daily_temps
+  )
+
+count(daily_averages, temp_category)
+
+daily_plot <- fxn_plot_daily(
+  .df = daily_averages,
+  .add_points = ice_phenology
+)
+
+daily_plot
+
+```
+
+
+## Annual average temperatures
+
+https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series/WI-003/tavg/12/12/1895-2023
+
+### Plot annual data
+
+```{r}
+annual_temps <- fxn_process_annual(.annual_df = "ashlandco_annual.txt")
+
+count(annual_temps, temp_category)
+
+annual_plot <- fxn_plot_annual(annual_temps,
+              .label_remove = c("1916"),
+              .cold_label_nudge = -1,
+              .hot_label_nudge = 1)
+
+annual_plot
+```
+
+## Combine poster elements
+
+
+```{r}
+poster <- fxn_make_poster(.title = "Madeline Island") 
+
+ggsave(plot = poster, file.path(here::here(), "Examples/MadelineIsland.pdf"), 
+         dpi = 300, width = 16, height = 20, units = "in")
+
+```
+
+
+
+
