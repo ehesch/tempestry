@@ -23,7 +23,7 @@ sysfonts::font_add_google(name = "Amatic SC", family = "amatic-sc")
 showtext_auto()
 ```
 
-This script produces a climate art! It is inspired by the [Tempestry Project](https://www.tempestryproject.com/) and [warming stripes](https://en.wikipedia.org/wiki/Warming_stripes). 
+This script produces climate art! It is inspired by the [Tempestry Project](https://www.tempestryproject.com/) and [warming stripes](https://en.wikipedia.org/wiki/Warming_stripes). 
 
 It will help you make a poster showing about 100 years of temperature data for various places. You'll get the **annual trend** along with 365 days of **daily temperature** for each year! For some places, you can also add other weather data (e.g. over a century of data on when Lake Superior's ice road to Madeline Island is open)! The data is roughly at the county level, but modifications to different geographies should be possible.
 
@@ -33,13 +33,16 @@ Since this is art:
 2) many details and data best practices are intentionally left out (i.e., you won't find a figure legend here!), 
 3) the code will need manual editing to get the aesthetics righ - what's here should get you started, but you'll probably need to do some polishing!
 
-This ReadMe file explains the basic principles behind making a poster. There are also a couple examples of posters I have given as gifts for people, which may get you started too (in the Examples folder)!
+This ReadMe file explains the basic principles behind making a poster. There are also a couple examples of posters I have given as gifts for people, which may help you started too (in the Examples folder),
 
 - WashingtonCo_MN: data from 1920 for the eastern Twin Cities. This is the geography for which this ReadMe was developed for, so the "defaults" are well suited for this area. The other scripts may give you a better idea of the little aesthetic tweaks to make. 
 - MadelineIsland_WI: a tempestry poster WITH over 100 years of ice phenology data! (from [Sharma et al. 2022](https://www.nature.com/articles/s41597-022-01391-6); so cool!)
 - LakeGeneva_WI: another tempestry poster with ice phenology
 - SanDiego_CA: this one makes some changes to stations included, since the weather varies so much based on distance from coast
 
+```{r example-image, width='200px', float='right'}
+knitr::include_graphics(file.path(here::here(), "Examples/example.png"))
+```
 
 # Creating your poster
 
@@ -158,7 +161,6 @@ poster <- fxn_make_poster(.title = "Washington County, MN")
 #          dpi = 300, width = 16, height = 20, units = "in")
 
 # poster
-knitr::include_graphics(file.path(here::here(), "Examples/example.png"))
 
 ```
 

@@ -1,8 +1,8 @@
 Tempestry aRt
 ================
-25 April 2023
+26 April 2023
 
-This script produces a climate art! It is inspired by the [Tempestry
+This script produces climate art! It is inspired by the [Tempestry
 Project](https://www.tempestryproject.com/) and [warming
 stripes](https://en.wikipedia.org/wiki/Warming_stripes).
 
@@ -26,17 +26,9 @@ Since this is art:
     what’s here should get you started, but you’ll probably need to do
     some polishing!
 
-Once you make your poster art, I have had good luck [printing at
-FedEx](https://www.office.fedex.com/default/posters.html). Cost of
-\$17.25 for a poster print (matte paper, vertical orientation, size
-16x20). But feel free to figure out what works for you (more convenient
-location/store, maybe you have a bigger or smaller picture frame already
-on hand that you’d like to use, maybe you want a fancier option like a
-foam board backing, etc.).
-
 This ReadMe file explains the basic principles behind making a poster.
 There are also a couple examples of posters I have given as gifts for
-people, which may get you started too (in the Examples folder)!
+people, which may help you started too (in the Examples folder),
 
 - WashingtonCo_MN: data from 1920 for the eastern Twin Cities. This is
   the geography for which this ReadMe was developed for, so the
@@ -49,6 +41,8 @@ people, which may get you started too (in the Examples folder)!
 - LakeGeneva_WI: another tempestry poster with ice phenology
 - SanDiego_CA: this one makes some changes to stations included, since
   the weather varies so much based on distance from coast
+
+![](Examples/example.png)<!-- -->
 
 # Creating your poster
 
@@ -149,4 +143,10 @@ down depending on what the data looks like.
 
 ## Combine poster elements
 
-![](Examples/example.png)<!-- -->
+Once you make your poster art, I have had good luck [printing at
+FedEx](https://www.office.fedex.com/default/posters.html). Cost of
+\$17.25 for a poster print (matte paper, vertical orientation, size
+16x20). But feel free to figure out what works for you (more convenient
+location/store, maybe you have a bigger or smaller picture frame already
+on hand that you’d like to use, maybe you want a fancier option like a
+foam board backing, etc.).
