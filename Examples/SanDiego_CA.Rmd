@@ -36,7 +36,9 @@ raw_daily_temps <- fxn_fetch_daily_stations(
   .distance_radius_mi = 10
 ) %>%
   filter(name != "LA MESA",
-         name != "SAN MIGUEL CALIFORNIA")
+         name != "SAN MIGUEL CALIFORNIA",
+         name != "SAN DIEGO MONTGOMERY FLD",
+         name != "SAN DIEGO MIRAMAR NAS")
 
 # make a map of which weather stations you are using for the daily temps; go back and adjust your parameters if you don't like it.
 raw_daily_temps %>%
