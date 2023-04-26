@@ -1,0 +1,146 @@
+---
+title: "Tempestry aRt"
+date: "`r format(Sys.time(), '%d %B %Y')`"
+output:
+  github_document:
+    toc: yes
+always_allow_html: yes
+urlcolor: blue
+---
+
+```{r setup, echo = F, message = F}
+knitr::opts_chunk$set(echo = FALSE, message = F, warning = F)
+
+library(tidyverse)
+library(rnoaa)
+library(showtext)
+
+source(file.path(here::here(), "R/annual_functions.R"))
+source(file.path(here::here(), "R/daily_functions.R"))
+source(file.path(here::here(), "R/poster_functions.R"))
+
+sysfonts::font_add_google(name = "Amatic SC", family = "amatic-sc")
+showtext_auto()
+```
+
+This script produces a climate art! It is inspired by the [Tempestry Project](https://www.tempestryproject.com/) and [warming stripes](https://en.wikipedia.org/wiki/Warming_stripes). 
+
+It will help you make a poster showing about 100 years of temperature data for various places. You'll get the **annual trend** along with 365 days of **daily temperature** for each year! For some places, you can also add other weather data (e.g. over a century of data on when Lake Superior's ice road to Madeline Island is open)! 
+
+Since this is art, there are some small creative liberties taken (i.e., filling in of missing data, usage of different color breaks based on what looks good, using multiple NOAA weather stations which aren't aligned with their dates of records, etc.). Also, since this is art, many details and data best practices are intentionally left out (i.e., you won't find a figure legend here!). The data is roughly at the county level, but modifications to different geographies should be possible!
+
+Once you make your poster art, I have had good luck [printing at FedEx](https://www.office.fedex.com/default/posters.html). Cost of \$17.25 for a poster print (matte paper, vertical orientation, size 16x20). But feel free to figure out what works for you (more convenient location/store, maybe you have a bigger or smaller picture frame already on hand that you'd like to use, maybe you want a fancier option like a foam board backing, etc.).
+
+# Creating your poster
+
+## Set-up 
+
+You will need to use an API key to connect to the NOAA database. [Request an API key here](https://www.ncdc.noaa.gov/cdo-web/token), then add the key to your `.Renviron` file. Enter in the console `usethis::edit_r_environ()` and type `NOAA_KEY="KEY GOES HERE, INSIDE QUOTES"`. Save and close the `.Renviron` file, and restart R.
+
+## Daily temperatures
+
+### Fetch station data
+
+The daily temperatures are fetched from stations within a certain distance from a given latitude and longitude (i.e., your home or another sentimental place). Sometimes the distance radius needs to be increased if stations are sparse, and other times the specific latitude and longitude might need to be adjusted to get what you want. Basically, this is part of the art - figure out what looks good.
+
+As an FYI, fetching station data does take a while. The very first time this code is run, you'll get stations names for all NOAA stations in the US (that takes a while, but only needs to happen once). Whenever you change the location for which you'd like to get data, it'll also take a while to run. 
+
+Sometimes the closest stations to the site need to be adjusted. A couple tips:
+1) The maximum number of stations to fetch data from is capped at 15. You may want to increase or decrease this number (edit the `limit` call). 
+2) The stations can have different data availability, but generally it seems like longer-term stations are more ideal for the art. Still, you might need to adjust (edit the `year_min` and `year_max` calls).    
+3) The code will attempt to fetch data through the most recently completed year, but you may need to write over your data cache to start displaying the most up-to-date data. 
+
+```{r}
+# fetch daily data; this does take a while
+raw_daily_temps <- fxn_fetch_daily_stations(
+  .site_latitude = 44.99107954469478,
+  .site_longitude = -92.87349611327194,
+  # .distance_radius_mi = 20
+)
+
+# make a map of which weather stations you are using for the daily temps; go back and adjust your parameters if you don't like it.
+raw_daily_temps %>%
+  group_by(latitude, longitude, name, id) %>%
+  summarise(mindate = min(date), maxdate = max(date)) %>%
+  sf::st_as_sf(coords = c( "longitude", "latitude"), crs = 4326) %>%
+  mapview::mapview()
+  
+```
+
+### Decide what years to use
+
+This is a balance! You probably want as many years of data as possible, but some of the early records are spotty or missing. Some steps are designed to deal with small missing data records, but you still need to figure out a good starting year. The code below gets you to a good estimate of what year to start at, but you may need to revisit it once you see what the plots look like. 
+
+This `min_year` is a *global* parameter, which is passed to the processing and plotting for both the daily and annual temperatures. So if (when) this parameter is adjusted, all code chunks below this also should be re-run (and subsequently styled). You'll know an adjustment to the `min_year` is needed if you see long "streaks" of the same daily temperatures. 
+
+```{r}
+min_year <- count(raw_daily_temps, year) %>%
+  full_join(tibble(year = c(min(raw_daily_temps$year) : max(raw_daily_temps$year)))) %>%
+  arrange(year) %>% 
+  filter(is.na(n) | n < 300) %>%
+  summarise(start_year = max(year) + 1) %>%
+  .[[1]]
+```
+
+### Make daily plot
+
+You will probably be reprocessing this piece several times to make it look nice. The daily average temperatures get mapped (#aesthetics), so just know that going into any manual adjustments you may be making.
+
+
+Tips:
+
+- Starting points for the temperature thresholds have been populated, but tweak as needed. Looking at the count of entries in each category can also be helpful (roughly even split between hot/cold, and even but less than !1000 in the extreme categories).
+- You'll probably end up trimming the dates included (i.e., starting the plots at a later date than the earliest potential date), which will mess with the starting point color scheme.
+- Finally, you might have other aesthetic preferences! Establishing a consistent color scheme across multiple locations? Have a predefined parameter for extreme hot or cold temperatures? 
+
+
+```{r}
+daily_averages <- fxn_process_daily(
+  .df = raw_daily_temps
+  )
+
+# count(daily_averages, temp_category)
+
+daily_plot <- fxn_plot_daily(
+  .df = daily_averages
+)
+```
+
+
+## Annual average temperatures
+
+### Fetch annual data
+
+[Manually download county-level average temperatures](https://www.ncei.noaa.gov/access/monitoring/climate-at-a-glance/county/time-series/MN-163/tavg/ann/2/1895-2023) from NOAA. Annual averages are calculated using [some fancy models](https://www.ncei.noaa.gov/access/monitoring/dyk/us-climate-divisions#grdd_) (weighting station data by area, quality control algorithms, etc.). Save this file in the data-raw folder.
+
+### Plot annual data
+
+The annual data is shown as deviations from the mean of all year's average temperature. Here too, the **years** which end up being included matter. So if/when the `min_year` parameter is adjusted above, this needs to get re-run. 
+
+The extreme years are labeled, but you may be adjusting the year threshold. You also may be needing to remove labels and nudge them up or down depending on what the data looks like. 
+
+
+```{r}
+annual_temps <- fxn_process_annual(.annual_df = "washingtonco_annual.csv"
+               )
+
+count(annual_temps, temp_category)
+
+arrange(annual_temps, temp_anomaly)
+annual_plot <- fxn_plot_annual(annual_temps,
+              .label_remove = c("1951", "1924"))
+
+```
+
+## Combine poster elements
+
+
+```{r}
+fxn_make_poster(.title = "Washington County, MN") %>%
+  ggsave(plot = ., file.path(here::here(), "tempestry_plot.pdf"), 
+         dpi = 300, width = 16, height = 20, units = "in")
+```
+
+
+
+
