@@ -71,7 +71,8 @@ fxn_process_daily <- function(.df = x,
     arrange(year, doy) %>%
     mutate(flag = if_else(is.na(tavg) & doy > 364, 1, 2)) %>%
     fill(tavg, .direction = c("up")) %>%
-    filter(!is.na(tavg))
+    filter(!is.na(tavg),
+           flag != 1)
 
   if (is.null(.temp_extreme_cold)) {
     .temp_extreme_cold <- floor(quantile(daily_averages$tavg, .03))
