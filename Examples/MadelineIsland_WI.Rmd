@@ -68,7 +68,10 @@ if(is.infinite(min_year)) {
 ice_phenology <- read_csv(file.path(here::here(), "data-raw/sharma2022data/PhenologyData.csv")) %>%
   filter(lake == "bayfield") %>%
   full_join(tribble(~"start_year", ~"iceOn", ~"iceOff",
-                    2022, lubridate::ymd("2022-01-18"), lubridate::ymd("2022-04-10"))) %>%
+                    2022, lubridate::ymd("2022-01-18"), lubridate::ymd("2022-04-10"),
+                    # 2023, #no shutdown
+                    # 2024, #no shutdown
+                    2025, ymd("2025-2-12"), ymd("2025-3-7"))) %>%
   mutate(fill = if_else(froze == "Y" & is.na(iceOn), 1, 2)) %>%
   fill(iceOn) %>%
   mutate(iceOn = if_else(fill == 1, lubridate::ymd(paste0(start_year, "-", lubridate::month(iceOn), "-", lubridate::day(iceOn))), iceOn)) %>%
